@@ -9,13 +9,20 @@ a{
 }
 
 /* TODO MI INDEX*/
+body{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)),
+    url("../img/fondoimportante.webp");
+    }
+
 /* PARTE DEL HEADER Y NAV*/
 .grid-container{
     width: 100%;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto 100px auto 120px;
+    grid-template-rows: 200px 300px auto 120px;
     grid-template-areas:
     "header header header"
     "nav nav nav"
@@ -24,43 +31,49 @@ a{
     ;
 }
 
-@media screen and (max-width: 589px) {
+@media screen and (max-width: 1109px) {
     .grid-container{
-        grid-template-rows: 150px 100px auto 120px;
+        grid-template-rows: 150px 200px auto 120px;
+    }
+    
+}
+
+@media screen and (max-width: 993px) {
+    .grid-container{
+        grid-template-rows: 150px 330px auto 120px;
     }
     
 }
 
 @media screen and (max-width: 450px) {
     .grid-container{
-        grid-template-rows: 100px 100px auto 120px;
+        grid-template-rows: 100px 300px auto 120px;
     }
     
 }
 
-body{
-width: 100%;
-height: 100%;
-background-image: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)),
-url("../img/fondoimportante.webp");
-}
 
 .encabezado{
     grid-area: header;
 }
+
 @media screen and (max-width: 587px){
     .encabezado{
-        width: 100%;
         display: flex;
         flex-direction: column;
-
+        height: 419px;
     }
 }
+
+
 
 .image-logo{
     width: 100%;
     height: 100%;
 }
+ 
+
+
 
 /* FIN DEL HEADER Y MENU*/
 
@@ -71,7 +84,7 @@ url("../img/fondoimportante.webp");
 
 @media screen and (max-width: 587px){
     .titulos-principales{
-        margin-top: 5px;
+        margin-top: 0px;
     }
 }
 
@@ -242,6 +255,7 @@ height: 35px;
         width: 100%;
         height: 100%;
         flex-direction: column;
+
     }
 }
 
